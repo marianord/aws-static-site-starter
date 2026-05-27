@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- ============================================================
+    AWS Static Site Starter — Personal Page Template
+    github.com/marianord/aws-static-site-starter
+
+    CUSTOMIZE THIS FILE:
+      1. Update your name, title, and bio below
+      2. Replace each href="#" with your real link URLs
+      3. Add assets/avatar.png (your photo, ~400×400 px)
+      4. Update the <title> and meta description tags
+  ============================================================ -->
+
+  <!-- UPDATE: your name and role -->
+  <title>Your Name — Your Role</title>
+
+  <!-- Meta -->
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- UPDATE: describe yourself -->
+  <meta name="description" content="Personal page of Your Name. Clone this starter template to host your own site on AWS CloudFront.">
+  <meta name="author" content="Your Name">
+  <meta name="apple-mobile-web-app-title" content="My Site" />
+
+  <!-- Open Graph -->
+  <!-- UPDATE: matches your title and description above -->
+  <meta property="og:title" content="Your Name — Your Role">
+  <meta property="og:description" content="Clone this starter template to host your own site on AWS CloudFront for free.">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon (SVG works in all modern browsers; replace with your own) -->
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+  <link rel="manifest" href="/assets/site.webmanifest" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>
+  <main class="page-wrapper">
+
+    <!-- ── Profile ─────────────────────────────────────────── -->
+    <section class="profile" aria-label="Profile">
+      <!--
+        Avatar: drop your photo as assets/avatar.png.
+        If the file is missing the initials badge shows automatically.
+      -->
+      <div class="avatar" aria-hidden="true">
+        <!-- Drop your photo as assets/avatar.png (~400×400 px).
+             The initials badge below shows automatically if the file is missing. -->
+        <img
+          src="assets/avatar.png"
+          alt="Your Name"
+          onerror="this.style.display='none'">
+        <!-- UPDATE: your initials (2–3 letters) -->
+        <span class="avatar-initials">YN</span>
+      </div>
+
+      <!-- UPDATE: your name -->
+      <h1 class="profile-name">Your Name</h1>
+
+      <!-- UPDATE: your title / role -->
+      <p class="profile-title">Your Title · Your Role</p>
+
+      <!-- UPDATE: your short bio (keep it to 1–2 lines) -->
+      <p class="profile-bio">
+        A short line about what you do ☁️<br>
+        Where you're based &amp; what you're passionate about
+      </p>
+    </section>
+
+    <!-- ── Links ────────────────────────────────────────────── -->
+    <nav class="links" aria-label="Links">
+
+      <!--
+        PRIMARY CTA — points to this very repo so attendees can clone it.
+        UPDATE href if you fork and rename the repo.
+      -->
+      <a href="https://github.com/marianord/aws-static-site-starter"
+         class="link-card link-card--primary"
+         target="_blank"
+         rel="noopener noreferrer"
+         aria-label="Clone this template on GitHub">
+        <span class="link-icon">
+          <!-- GitHub mark (inline SVG, no external dependency) -->
+          <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22" aria-hidden="true">
+            <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+          </svg>
+        </span>
+        <span class="link-text">Clone this template</span>
+        <span class="link-badge">Free on AWS</span>
+      </a>
+
+      <!-- UPDATE href to your LinkedIn profile URL -->
+      <a href="#your-linkedin-url"
+         class="link-card"
+         target="_blank"
+         rel="noopener noreferrer"
+         aria-label="LinkedIn profile">
+        <span class="link-icon">
+          <img src="assets/linkedin-in-brands-solid.svg" alt="" width="22" height="22">
+        </span>
+        <span class="link-text">LinkedIn</span>
+      </a>
+
+      <!-- UPDATE href to your GitHub profile URL -->
+      <a href="#your-github-url"
+         class="link-card"
+         target="_blank"
+         rel="noopener noreferrer"
+         aria-label="GitHub profile">
+        <span class="link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22" aria-hidden="true">
+            <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+          </svg>
+        </span>
+        <span class="link-text">GitHub</span>
+      </a>
+
+      <!-- UPDATE href to your YouTube channel URL (or remove this block) -->
+      <a href="#your-youtube-url"
+         class="link-card"
+         target="_blank"
+         rel="noopener noreferrer"
+         aria-label="YouTube channel">
+        <span class="link-icon">
+          <img src="assets/youtube-brands-solid.svg" alt="" width="22" height="22">
+        </span>
+        <span class="link-text">YouTube</span>
+      </a>
+
+      <!-- UPDATE href to your Instagram profile URL (or remove this block) -->
+      <a href="#your-instagram-url"
+         class="link-card"
+         target="_blank"
+         rel="noopener noreferrer"
+         aria-label="Instagram profile">
+        <span class="link-icon">
+          <img src="assets/instagram-brands-solid.svg" alt="" width="22" height="22">
+        </span>
+        <span class="link-text">Instagram</span>
+      </a>
+
+    </nav>
+
+    <!-- ── Footer ───────────────────────────────────────────── -->
+    <footer class="page-footer">
+      <p class="footer-hosting">
+        Hosted on <strong class="aws-orange">AWS CloudFront</strong>
+        <span class="footer-sep" aria-hidden="true">·</span>
+        <a href="https://aws.amazon.com/cloudfront/pricing/"
+           class="footer-link"
+           target="_blank"
+           rel="noopener noreferrer">CloudFront Flat Pricing</a>
+      </p>
+      <p class="footer-cta">
+        <a href="https://github.com/marianord/aws-static-site-starter"
+           class="footer-link"
+           target="_blank"
+           rel="noopener noreferrer">Fork this template</a>
+        and host your own!
+      </p>
+    </footer>
+
+  </main>
+</body>
+
+</html>

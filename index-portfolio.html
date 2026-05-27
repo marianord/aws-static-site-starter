@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- ============================================================
+    AWS Static Site Starter — Portfolio Page Template
+    github.com/marianord/aws-static-site-starter
+
+    CUSTOMIZE THIS FILE:
+      1. Update your name, role, and bio in the Hero section
+      2. Edit the About, Skills, and Projects sections
+      3. Replace every href="#your-*" with your real URLs
+      4. Add assets/avatar.png (your photo, ~400×400 px)
+      5. Update the <title> and meta description tags
+  ============================================================ -->
+
+  <!-- UPDATE: your name and role -->
+  <title>Your Name — Portfolio</title>
+
+  <!-- Meta -->
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- UPDATE: describe yourself -->
+  <meta name="description" content="Portfolio of Your Name — Cloud Engineer and builder. Hosted on AWS CloudFront.">
+  <meta name="author" content="Your Name">
+  <meta name="apple-mobile-web-app-title" content="My Portfolio" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Your Name — Portfolio">
+  <meta property="og:description" content="Cloud engineer, builder, and AWS enthusiast. Check out my work.">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon (SVG works in all modern browsers; replace with your own) -->
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+  <link rel="manifest" href="/assets/site.webmanifest" />
+
+  <!-- Styles (shared base + portfolio extensions) -->
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="assets/portfolio.css">
+</head>
+
+<body class="portfolio-body">
+
+  <!-- ══════════════════════════════════════════════════════════
+    HERO
+  ══════════════════════════════════════════════════════════ -->
+  <header class="pf-hero">
+    <div class="pf-container">
+
+      <div class="avatar avatar--lg" aria-hidden="true">
+        <!-- Drop your photo as assets/avatar.png (~400×400 px) -->
+        <img src="assets/avatar.png" alt="Your Name" onerror="this.style.display='none'">
+        <!-- UPDATE: your initials -->
+        <span class="avatar-initials">YN</span>
+      </div>
+
+      <!-- UPDATE: your name -->
+      <h1 class="pf-hero__name">Your Name</h1>
+
+      <!-- UPDATE: your title / role -->
+      <p class="pf-hero__role">Cloud Engineer · AWS Community Builder</p>
+
+      <!-- UPDATE: your tagline (1–2 sentences max) -->
+      <p class="pf-hero__bio">
+        I build scalable, cost-effective things on AWS ☁️<br>
+        Based in <strong>Your City</strong> — passionate about developer experience and open source.
+      </p>
+
+      <div class="pf-hero__actions">
+        <a href="#projects" class="pf-btn pf-btn--primary">View my work</a>
+        <a href="#connect" class="pf-btn pf-btn--ghost">Connect with me</a>
+      </div>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ══════════════════════════════════════════════════════════
+      ABOUT
+    ══════════════════════════════════════════════════════════ -->
+    <section class="pf-section" id="about" aria-labelledby="about-heading">
+      <div class="pf-container pf-container--narrow">
+
+        <h2 class="pf-section__title" id="about-heading">About</h2>
+
+        <!-- UPDATE: write 2–4 sentences about yourself -->
+        <p class="pf-section__body">
+          Hi, I'm <strong>Your Name</strong> — a cloud engineer focused on helping teams
+          ship faster and cheaper on AWS. I specialize in serverless architectures,
+          infrastructure-as-code, and static site delivery at the edge.
+        </p>
+        <p class="pf-section__body">
+          I regularly speak at community events and love sharing what I learn.
+          This page itself is a demo: a static site hosted on
+          <strong class="aws-orange">Amazon CloudFront</strong> for free (or near-free)
+          using the CloudFront Flat Pricing model.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════
+      SKILLS
+    ══════════════════════════════════════════════════════════ -->
+    <section class="pf-section pf-section--alt" id="skills" aria-labelledby="skills-heading">
+      <div class="pf-container">
+
+        <h2 class="pf-section__title" id="skills-heading">Skills &amp; Tools</h2>
+
+        <!-- UPDATE: add / remove skill chips to match your stack -->
+        <ul class="pf-skills" aria-label="Skills list">
+          <li class="pf-skill pf-skill--aws">AWS</li>
+          <li class="pf-skill pf-skill--aws">CloudFront</li>
+          <li class="pf-skill pf-skill--aws">S3</li>
+          <li class="pf-skill pf-skill--aws">Lambda</li>
+          <li class="pf-skill pf-skill--aws">Route 53</li>
+          <li class="pf-skill">HTML &amp; CSS</li>
+          <li class="pf-skill">JavaScript</li>
+          <li class="pf-skill">Python</li>
+          <li class="pf-skill">Terraform</li>
+          <li class="pf-skill">GitHub Actions</li>
+          <li class="pf-skill">Docker</li>
+          <li class="pf-skill">Linux</li>
+        </ul>
+
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════
+      PROJECTS
+    ══════════════════════════════════════════════════════════ -->
+    <section class="pf-section" id="projects" aria-labelledby="projects-heading">
+      <div class="pf-container">
+
+        <h2 class="pf-section__title" id="projects-heading">Projects</h2>
+
+        <div class="pf-projects">
+
+          <!-- ── Project card 1 ── UPDATE or duplicate as needed ── -->
+          <article class="pf-project-card">
+            <div class="pf-project-card__header">
+              <span class="pf-project-card__icon" aria-hidden="true">☁️</span>
+              <!-- UPDATE href and title -->
+              <h3 class="pf-project-card__title">
+                <a href="#your-project-url" target="_blank" rel="noopener noreferrer">
+                  AWS Static Site Starter
+                </a>
+              </h3>
+            </div>
+            <p class="pf-project-card__desc">
+              Minimal personal-page template deployed on Amazon CloudFront.
+              Zero backend, free tier eligible, ready in 15 minutes.
+            </p>
+            <ul class="pf-project-card__tags" aria-label="Technologies used">
+              <li>HTML</li><li>CSS</li><li>S3</li><li>CloudFront</li>
+            </ul>
+            <a href="https://github.com/marianord/aws-static-site-starter"
+               class="pf-project-card__link"
+               target="_blank" rel="noopener noreferrer">
+              View on GitHub →
+            </a>
+          </article>
+
+          <!-- ── Project card 2 ── UPDATE ── -->
+          <article class="pf-project-card">
+            <div class="pf-project-card__header">
+              <span class="pf-project-card__icon" aria-hidden="true">🚀</span>
+              <h3 class="pf-project-card__title">
+                <a href="#your-project-2-url" target="_blank" rel="noopener noreferrer">
+                  Your Second Project
+                </a>
+              </h3>
+            </div>
+            <p class="pf-project-card__desc">
+              A short description of what this project does and the problem it solves.
+              Keep it to 2–3 sentences.
+            </p>
+            <ul class="pf-project-card__tags" aria-label="Technologies used">
+              <li>Lambda</li><li>Python</li><li>DynamoDB</li>
+            </ul>
+            <a href="#your-project-2-url"
+               class="pf-project-card__link"
+               target="_blank" rel="noopener noreferrer">
+              View project →
+            </a>
+          </article>
+
+          <!-- ── Project card 3 ── UPDATE ── -->
+          <article class="pf-project-card">
+            <div class="pf-project-card__header">
+              <span class="pf-project-card__icon" aria-hidden="true">🛠️</span>
+              <h3 class="pf-project-card__title">
+                <a href="#your-project-3-url" target="_blank" rel="noopener noreferrer">
+                  Your Third Project
+                </a>
+              </h3>
+            </div>
+            <p class="pf-project-card__desc">
+              A short description of what this project does and the problem it solves.
+              Keep it to 2–3 sentences.
+            </p>
+            <ul class="pf-project-card__tags" aria-label="Technologies used">
+              <li>Terraform</li><li>GitHub Actions</li><li>EC2</li>
+            </ul>
+            <a href="#your-project-3-url"
+               class="pf-project-card__link"
+               target="_blank" rel="noopener noreferrer">
+              View project →
+            </a>
+          </article>
+
+        </div><!-- /.pf-projects -->
+
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════
+      CONNECT (same links as index.html)
+    ══════════════════════════════════════════════════════════ -->
+    <section class="pf-section pf-section--alt" id="connect" aria-labelledby="connect-heading">
+      <div class="pf-container pf-container--narrow">
+
+        <h2 class="pf-section__title" id="connect-heading">Connect</h2>
+
+        <nav class="links" aria-label="Social links">
+
+          <!-- PRIMARY CTA -->
+          <a href="https://github.com/marianord/aws-static-site-starter"
+             class="link-card link-card--primary"
+             target="_blank" rel="noopener noreferrer"
+             aria-label="Clone this template on GitHub">
+            <span class="link-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22" aria-hidden="true">
+                <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+              </svg>
+            </span>
+            <span class="link-text">Clone this template</span>
+            <span class="link-badge">Free on AWS</span>
+          </a>
+
+          <!-- UPDATE href -->
+          <a href="#your-linkedin-url"
+             class="link-card"
+             target="_blank" rel="noopener noreferrer"
+             aria-label="LinkedIn profile">
+            <span class="link-icon">
+              <img src="assets/linkedin-in-brands-solid.svg" alt="" width="22" height="22">
+            </span>
+            <span class="link-text">LinkedIn</span>
+          </a>
+
+          <!-- UPDATE href -->
+          <a href="#your-github-url"
+             class="link-card"
+             target="_blank" rel="noopener noreferrer"
+             aria-label="GitHub profile">
+            <span class="link-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22" aria-hidden="true">
+                <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+              </svg>
+            </span>
+            <span class="link-text">GitHub</span>
+          </a>
+
+          <!-- UPDATE href (or remove) -->
+          <a href="#your-youtube-url"
+             class="link-card"
+             target="_blank" rel="noopener noreferrer"
+             aria-label="YouTube channel">
+            <span class="link-icon">
+              <img src="assets/youtube-brands-solid.svg" alt="" width="22" height="22">
+            </span>
+            <span class="link-text">YouTube</span>
+          </a>
+
+          <!-- UPDATE href (or remove) -->
+          <a href="#your-instagram-url"
+             class="link-card"
+             target="_blank" rel="noopener noreferrer"
+             aria-label="Instagram profile">
+            <span class="link-icon">
+              <img src="assets/instagram-brands-solid.svg" alt="" width="22" height="22">
+            </span>
+            <span class="link-text">Instagram</span>
+          </a>
+
+        </nav>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════════════════════════════════════════════════════
+    FOOTER
+  ══════════════════════════════════════════════════════════ -->
+  <footer class="pf-footer">
+    <p class="footer-hosting">
+      Hosted on <strong class="aws-orange">AWS CloudFront</strong>
+      <span class="footer-sep" aria-hidden="true">·</span>
+      <a href="https://aws.amazon.com/cloudfront/pricing/"
+         class="footer-link"
+         target="_blank" rel="noopener noreferrer">CloudFront Flat Pricing</a>
+    </p>
+    <p class="footer-cta">
+      <a href="https://github.com/marianord/aws-static-site-starter"
+         class="footer-link"
+         target="_blank" rel="noopener noreferrer">Fork this template</a>
+      and host your own!
+    </p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,332 @@
+/* ============================================================
+   AWS Static Site Starter — Stylesheet
+   github.com/MarianoRD/aws-static-site-starter
+
+   CUSTOMIZE THIS FILE:
+     - Change --color-accent-* to match your brand colors
+     - Adjust --font-* if you want different typefaces
+     - The .avatar gradient uses the same accent colors
+============================================================ */
+
+/* ── Fonts ───────────────────────────────────────────────── */
+@font-face {
+  font-family: 'EmberBold';
+  src: url(ember-bold.ttf) format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'EmberHeavy';
+  src: url(ember-heavy.ttf) format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'EmberRegular';
+  src: url(ember-regular.ttf) format('truetype');
+  font-display: swap;
+}
+
+/* ── Design tokens ───────────────────────────────────────── */
+:root {
+  /* Background gradient stops */
+  --bg-top:    #0f1625;
+  --bg-mid:    #1c1040;
+  --bg-bottom: #0d1a2e;
+
+  /* Brand accents — UPDATE these to your brand colors */
+  --accent-purple: #a166ff;
+  --accent-orange: #ff9900;   /* AWS orange */
+
+  /* Text */
+  --text-primary:   #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.60);
+  --text-muted:     rgba(255, 255, 255, 0.35);
+
+  /* Cards */
+  --card-bg:       rgba(255, 255, 255, 0.06);
+  --card-border:   rgba(255, 255, 255, 0.12);
+  --card-bg-hover: rgba(255, 255, 255, 0.13);
+
+  /* Misc */
+  --radius-card: 14px;
+  --speed:       0.22s;
+
+  /* Fonts */
+  --font:       'EmberRegular', 'Arial', sans-serif;
+  --font-bold:  'EmberBold',    'Arial', sans-serif;
+  --font-heavy: 'EmberHeavy',   'Arial', sans-serif;
+}
+
+/* ── Reset ───────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+
+/* ── Body ────────────────────────────────────────────────── */
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  color: var(--text-primary);
+  font-family: var(--font);
+  -webkit-font-smoothing: antialiased;
+  background:
+    linear-gradient(160deg, var(--bg-top) 0%, var(--bg-mid) 50%, var(--bg-bottom) 100%);
+  background-attachment: fixed;
+}
+
+/* Subtle dot-grid texture */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: radial-gradient(rgba(161, 102, 255, 0.12) 1px, transparent 1px);
+  background-size: 38px 38px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── Page wrapper ────────────────────────────────────────── */
+.page-wrapper {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 52px 20px 36px;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+/* ── Profile ─────────────────────────────────────────────── */
+.profile {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Avatar ring + image/initials fallback */
+.avatar {
+  position: relative;
+  width: 112px;
+  height: 112px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent-purple), var(--accent-orange));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 22px;
+  overflow: hidden;
+  box-shadow:
+    0 0 0 3px rgba(161, 102, 255, 0.35),
+    0 10px 40px rgba(0, 0, 0, 0.45);
+}
+
+.avatar img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.avatar-initials {
+  font-family: var(--font-heavy);
+  font-size: 2rem;
+  color: #fff;
+  letter-spacing: 0.04em;
+  user-select: none;
+}
+
+/* Name, title, bio */
+.profile-name {
+  font-family: var(--font-heavy);
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0 8px;
+  letter-spacing: -0.01em;
+}
+
+.profile-title {
+  font-family: var(--font-bold);
+  font-size: 0.8rem;
+  color: var(--accent-purple);
+  margin: 0 0 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.profile-bio {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.65;
+}
+
+/* ── Link cards ──────────────────────────────────────────── */
+.links {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 44px;
+}
+
+/* Base card */
+.link-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 20px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-card);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: var(--text-primary);
+  text-decoration: none;
+  font-family: var(--font-bold);
+  font-size: 1rem;
+  cursor: pointer;
+  transition:
+    background   var(--speed) ease,
+    border-color var(--speed) ease,
+    transform    var(--speed) ease,
+    box-shadow   var(--speed) ease;
+}
+
+.link-card:hover,
+.link-card:focus-visible {
+  background: var(--card-bg-hover);
+  border-color: rgba(255, 255, 255, 0.28);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+.link-card:active {
+  transform: translateY(-1px);
+}
+
+/* Primary CTA — highlighted gradient card */
+.link-card--primary {
+  background: linear-gradient(
+    135deg,
+    rgba(161, 102, 255, 0.20),
+    rgba(255, 153,   0, 0.14)
+  );
+  border-color: rgba(161, 102, 255, 0.40);
+}
+
+.link-card--primary:hover,
+.link-card--primary:focus-visible {
+  background: linear-gradient(
+    135deg,
+    rgba(161, 102, 255, 0.36),
+    rgba(255, 153,   0, 0.24)
+  );
+  border-color: rgba(161, 102, 255, 0.70);
+  box-shadow: 0 10px 32px rgba(161, 102, 255, 0.28);
+}
+
+/* Icon wrapper (SVG or IMG) */
+.link-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  /* Invert dark SVG icons to white */
+  filter: invert(100%) sepia(0%) saturate(0%) brightness(100%);
+}
+
+.link-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.link-text {
+  flex: 1;
+}
+
+/* Small pill badge on primary card */
+.link-badge {
+  font-family: var(--font);
+  font-size: 0.70rem;
+  background: linear-gradient(135deg, var(--accent-purple), var(--accent-orange));
+  color: #fff;
+  padding: 3px 11px;
+  border-radius: 20px;
+  white-space: nowrap;
+  letter-spacing: 0.03em;
+}
+
+/* ── Footer ──────────────────────────────────────────────── */
+.page-footer {
+  margin-top: auto;
+  width: 100%;
+  text-align: center;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-hosting {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin: 0 0 6px;
+}
+
+.footer-cta {
+  font-size: 0.80rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.aws-orange {
+  color: var(--accent-orange);
+}
+
+.footer-sep {
+  margin: 0 8px;
+  opacity: 0.40;
+}
+
+.footer-link {
+  color: var(--accent-purple);
+  text-decoration: none;
+  transition: color var(--speed) ease;
+}
+
+.footer-link:hover {
+  color: var(--accent-orange);
+  text-decoration: underline;
+}
+
+/* ── Accessibility ───────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--accent-purple);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .page-wrapper {
+    padding: 40px 16px 28px;
+  }
+
+  .profile-name {
+    font-size: 1.75rem;
+  }
+
+  .avatar {
+    width: 96px;
+    height: 96px;
+  }
+
+  .avatar-initials {
+    font-size: 1.65rem;
+  }
+}

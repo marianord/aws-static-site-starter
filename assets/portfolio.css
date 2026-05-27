@@ -1,0 +1,367 @@
+/* ============================================================
+   AWS Static Site Starter — Portfolio Stylesheet
+   Extends assets/style.css — load AFTER it.
+   github.com/marianord/aws-static-site-starter
+============================================================ */
+
+/* ── Portfolio body override ─────────────────────────────── */
+/* Full-width layout instead of the narrow linktree wrapper  */
+.portfolio-body .page-wrapper { display: none; }  /* not used */
+
+/* ── Shared container ────────────────────────────────────── */
+.pf-container {
+  width: 100%;
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.pf-container--narrow {
+  max-width: 620px;
+}
+
+/* ── Hero ────────────────────────────────────────────────── */
+.pf-hero {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 72px 24px 64px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+/* Larger avatar variant */
+.avatar--lg {
+  width: 130px;
+  height: 130px;
+  margin-bottom: 28px;
+  box-shadow:
+    0 0 0 4px rgba(161, 102, 255, 0.30),
+    0 16px 48px rgba(0, 0, 0, 0.50);
+}
+
+.avatar--lg .avatar-initials {
+  font-size: 2.4rem;
+}
+
+.pf-hero__name {
+  font-family: var(--font-heavy);
+  font-size: 2.6rem;
+  font-weight: 700;
+  margin: 0 0 10px;
+  letter-spacing: -0.02em;
+}
+
+.pf-hero__role {
+  font-family: var(--font-bold);
+  font-size: 0.82rem;
+  color: var(--accent-purple);
+  margin: 0 0 18px;
+  text-transform: uppercase;
+  letter-spacing: 0.10em;
+}
+
+.pf-hero__bio {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin: 0 auto 32px;
+  max-width: 520px;
+}
+
+/* CTA buttons */
+.pf-hero__actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.pf-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  border-radius: 10px;
+  font-family: var(--font-bold);
+  font-size: 0.95rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background   var(--speed) ease,
+    border-color var(--speed) ease,
+    transform    var(--speed) ease,
+    box-shadow   var(--speed) ease;
+}
+
+.pf-btn:active { transform: translateY(1px); }
+
+.pf-btn--primary {
+  background: linear-gradient(135deg, var(--accent-purple), #7b3fe4);
+  color: #fff;
+  border: 1px solid transparent;
+  box-shadow: 0 4px 20px rgba(161, 102, 255, 0.35);
+}
+
+.pf-btn--primary:hover {
+  background: linear-gradient(135deg, #b47fff, #9056f0);
+  box-shadow: 0 6px 28px rgba(161, 102, 255, 0.50);
+  transform: translateY(-2px);
+  color: #fff;
+  text-decoration: none;
+}
+
+.pf-btn--ghost {
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--card-border);
+}
+
+.pf-btn--ghost:hover {
+  background: var(--card-bg-hover);
+  border-color: rgba(255, 255, 255, 0.28);
+  transform: translateY(-2px);
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+/* ── Section base ────────────────────────────────────────── */
+.pf-section {
+  position: relative;
+  z-index: 1;
+  padding: 72px 0;
+}
+
+.pf-section--alt {
+  background: rgba(255, 255, 255, 0.025);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.pf-section__title {
+  font-family: var(--font-heavy);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 32px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.pf-section__title::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, rgba(161,102,255,0.4), transparent);
+}
+
+.pf-section__body {
+  font-size: 0.975rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  margin: 0 0 16px;
+}
+
+.pf-section__body:last-child { margin-bottom: 0; }
+.pf-section__body strong { color: var(--text-primary); }
+
+/* ── Skills ──────────────────────────────────────────────── */
+.pf-skills {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.pf-skill {
+  font-family: var(--font-bold);
+  font-size: 0.80rem;
+  color: var(--text-primary);
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  padding: 6px 14px;
+  letter-spacing: 0.02em;
+  transition: background var(--speed) ease, border-color var(--speed) ease;
+}
+
+.pf-skill:hover {
+  background: var(--card-bg-hover);
+  border-color: rgba(255, 255, 255, 0.22);
+}
+
+/* AWS-branded skill chips */
+.pf-skill--aws {
+  color: var(--accent-orange);
+  border-color: rgba(255, 153, 0, 0.30);
+  background: rgba(255, 153, 0, 0.07);
+}
+
+.pf-skill--aws:hover {
+  background: rgba(255, 153, 0, 0.14);
+  border-color: rgba(255, 153, 0, 0.50);
+}
+
+/* ── Projects grid ───────────────────────────────────────── */
+.pf-projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.pf-project-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 14px;
+  padding: 24px;
+  transition:
+    background   var(--speed) ease,
+    border-color var(--speed) ease,
+    transform    var(--speed) ease,
+    box-shadow   var(--speed) ease;
+}
+
+.pf-project-card:hover {
+  background: var(--card-bg-hover);
+  border-color: rgba(161, 102, 255, 0.35);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.35);
+}
+
+.pf-project-card__header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.pf-project-card__icon {
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.pf-project-card__title {
+  font-family: var(--font-bold);
+  font-size: 1rem;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.pf-project-card__title a {
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: color var(--speed) ease;
+}
+
+.pf-project-card__title a:hover {
+  color: var(--accent-purple);
+}
+
+.pf-project-card__desc {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  margin: 0 0 16px;
+  flex: 1;
+}
+
+.pf-project-card__tags {
+  list-style: none;
+  margin: 0 0 18px;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.pf-project-card__tags li {
+  font-size: 0.72rem;
+  font-family: var(--font-bold);
+  background: rgba(161, 102, 255, 0.12);
+  color: var(--accent-purple);
+  border: 1px solid rgba(161, 102, 255, 0.25);
+  border-radius: 6px;
+  padding: 3px 9px;
+  letter-spacing: 0.02em;
+}
+
+.pf-project-card__link {
+  font-family: var(--font-bold);
+  font-size: 0.85rem;
+  color: var(--accent-purple);
+  text-decoration: none;
+  margin-top: auto;
+  transition: color var(--speed) ease;
+}
+
+.pf-project-card__link:hover {
+  color: var(--accent-orange);
+  text-decoration: underline;
+}
+
+/* ── Connect section: reuse .links from style.css ───────── */
+/* Constrain the link card width inside the section */
+.pf-section .links {
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+/* ── Footer ──────────────────────────────────────────────── */
+.pf-footer {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 32px 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.pf-footer .footer-hosting,
+.pf-footer .footer-cta {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin: 0 0 6px;
+}
+
+.pf-footer .footer-cta {
+  font-size: 0.80rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* ── Smooth-scroll for anchor links ─────────────────────── */
+html { scroll-behavior: smooth; }
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 600px) {
+  .pf-hero {
+    padding: 52px 16px 48px;
+  }
+
+  .pf-hero__name {
+    font-size: 2rem;
+  }
+
+  .avatar--lg {
+    width: 100px;
+    height: 100px;
+  }
+
+  .avatar--lg .avatar-initials {
+    font-size: 1.9rem;
+  }
+
+  .pf-section {
+    padding: 52px 0;
+  }
+
+  .pf-projects {
+    grid-template-columns: 1fr;
+  }
+
+  .pf-container {
+    padding: 0 16px;
+  }
+}
